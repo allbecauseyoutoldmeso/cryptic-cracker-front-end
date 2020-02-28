@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import './index.css'
 
 const AnagramCracker = () => {
-  const baseUrl = 'http://localhost:3000'
-
+  const baseUrl = process.env.REACT_APP_BACKEND_URL
   const [letters, setLetters] = useState(null)
   const [anagrams, setAnagrams] = useState(null)
 
@@ -11,7 +10,7 @@ const AnagramCracker = () => {
     var url = new URL(baseUrl + '/api/anagrams')
     url.searchParams.append('letters', letters)
     const response = await fetch(url)
-    return await response.json()
+    return response.json()
   }
 
   const handleClick = () => {
