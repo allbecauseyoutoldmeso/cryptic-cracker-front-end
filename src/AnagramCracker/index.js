@@ -1,17 +1,11 @@
 import React, { useState } from 'react'
+import Results from '../shared/Results'
+import { fetchAnagrams } from '../shared/apiRequests'
 import '../index.css'
 
 const AnagramCracker = () => {
-  const baseUrl = process.env.REACT_APP_BACKEND_URL
   const [letters, setLetters] = useState(null)
   const [anagrams, setAnagrams] = useState(null)
-
-  const fetchAnagrams = async letters => {
-    var url = new URL(baseUrl + '/api/anagrams')
-    url.searchParams.append('letters', letters)
-    const response = await fetch(url)
-    return response.json()
-  }
 
   const handleClick = () => {
     fetchAnagrams(letters).then(response => {
@@ -23,12 +17,6 @@ const AnagramCracker = () => {
     setLetters(event.target.value)
   }
 
-  const renderAnagrams = () => {
-    return anagrams.map(anagram => {
-      return <p>{anagram}</p>
-    })
-  }
-
   return (
     <>
       <div className="container">
@@ -36,8 +24,7 @@ const AnagramCracker = () => {
         <label htmlFor="letter-input">letters</label>
         <input id="letter-input" type="text" onChange={handleChange}></input>
         <button onClick={handleClick}>submit</button>
-        <h3>results</h3>
-        {anagrams && renderAnagrams()}
+        <Results items={anagrams} />
       </div>
     </>
   )
