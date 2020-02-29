@@ -16,16 +16,18 @@ const Home = () => {
         return <AnagramCracker />
       case 'patternMatcher':
         return <PatternMatcher />
-      case 'synonyms':
+      case 'synonymFinder':
         return <SynonymFinder />
-      case 'definitions':
+      case 'definitionFinder':
         return <DefinitionFinder />
+      default:
+        return null
     }
   }
 
   return (
     <div>
-      <Menu setGadget={setGadget} />
+      <Menu setGadget={setGadget} gadget={gadget} />
       <div className="gadget-container">{renderGadget()}</div>
     </div>
   )

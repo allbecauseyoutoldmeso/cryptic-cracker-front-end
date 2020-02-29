@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import NumberSelector from './NumberSelector'
 import Form from './Form'
-import Results from '../shared/Results'
+import Results from '../shared/Form/Results'
 import { fetchMatches } from '../shared/apiRequests'
 import { ascendingArray } from './helpers.js'
 

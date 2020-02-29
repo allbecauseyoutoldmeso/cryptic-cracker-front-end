@@ -84,11 +84,13 @@ select {
   background: none;
   border: none;
   color: #c6a49a;
-
   max-width: fit-content;
 }
 
-.menu-item:focus {
+.selected-menu-item {
+  background: none;
+  border: none;
+  max-width: fit-content;
   color: #e94e77;
   font-size: 30px;
 }

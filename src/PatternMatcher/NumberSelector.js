@@ -16,7 +16,7 @@ const NumberSelector = ({ maximum, onChange }) => {
     <>
       <label htmlFor="number-select">word length</label>
       <select onChange={onChange} id="number-select">
-        <option key="placeholder" value="placeholder">
+        <option key="placeholder" value="placeholder" disabled>
           select
         </option>
         {renderOptions()}
