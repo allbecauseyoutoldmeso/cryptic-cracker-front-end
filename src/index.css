@@ -38,6 +38,7 @@ button:hover {
   flex-direction: column;
   max-width: 500px;
   align-items: flex-end;
+  margin-top: 40px;
 }
 
 label {
@@ -77,4 +78,23 @@ select {
 
 .brown {
   color: #c6a49a;
+}
+
+.menu-item {
+  background: none;
+  border: none;
+  color: #c6a49a;
+
+  max-width: fit-content;
+}
+
+.menu-item:focus {
+  color: #e94e77;
+  font-size: 30px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

@@ -4,7 +4,6 @@ import Form from './Form'
 import Results from '../shared/Results'
 import { fetchMatches } from '../shared/apiRequests'
 import { ascendingArray } from './helpers.js'
-import '../index.css'
 
 const PatternMatcher = () => {
   const [length, setLength] = useState(null)
@@ -36,15 +35,8 @@ const PatternMatcher = () => {
     })
   }
 
-  const renderMatches = () => {
-    return matches.map((match, index) => {
-      return <li key={index}>{match}</li>
-    })
-  }
-
   return (
     <div className="container">
-      <h2>pattern matcher</h2>
       <NumberSelector maximum={45} onChange={handleChange} />
       {length && <Form length={length} handleSubmit={handleSubmit} />}
       <Results items={matches} />
