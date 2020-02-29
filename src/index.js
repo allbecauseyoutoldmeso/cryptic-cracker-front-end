@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import AnagramCracker from './AnagramCracker'
 import PatternMatcher from './PatternMatcher'
 import SynonymFinder from './SynonymFinder'
+import DefinitionFinder from './DefinitionFinder'
 import Menu from './layout/Menu'
 import './index.css'
 
@@ -17,6 +18,8 @@ const Home = () => {
         return <PatternMatcher />
       case 'synonyms':
         return <SynonymFinder />
+      case 'definitions':
+        return <DefinitionFinder />
     }
   }
 

@@ -20,3 +20,10 @@ export const fetchSynonyms = async word => {
   const response = await fetch(url)
   return response.json()
 }
+
+export const fetchDefinitions = async word => {
+  var url = new URL(baseUrl + '/api/definitions')
+  url.searchParams.append('word', word)
+  const response = await fetch(url)
+  return response.json()
+}
