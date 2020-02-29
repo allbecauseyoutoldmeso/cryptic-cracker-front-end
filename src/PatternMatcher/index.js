@@ -36,11 +36,11 @@ const PatternMatcher = () => {
   }
 
   return (
-    <div className="container">
+    <>
       <NumberSelector maximum={45} onChange={handleChange} />
       {length && <Form length={length} handleSubmit={handleSubmit} />}
       <Results items={matches} />
-    </div>
+    </>
   )
 }
 

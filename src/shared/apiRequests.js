@@ -13,3 +13,10 @@ export const fetchAnagrams = async letters => {
   const response = await fetch(url)
   return response.json()
 }
+
+export const fetchSynonyms = async word => {
+  var url = new URL(baseUrl + '/api/synonyms')
+  url.searchParams.append('word', word)
+  const response = await fetch(url)
+  return response.json()
+}

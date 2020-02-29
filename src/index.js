@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import AnagramCracker from './AnagramCracker'
 import PatternMatcher from './PatternMatcher'
+import SynonymFinder from './SynonymFinder'
 import Menu from './layout/Menu'
 import './index.css'
 
@@ -14,13 +15,15 @@ const Home = () => {
         return <AnagramCracker />
       case 'patternMatcher':
         return <PatternMatcher />
+      case 'synonyms':
+        return <SynonymFinder />
     }
   }
 
   return (
     <div>
       <Menu setGadget={setGadget} />
-      {renderGadget()}
+      <div className="gadget-container">{renderGadget()}</div>
     </div>
   )
 }

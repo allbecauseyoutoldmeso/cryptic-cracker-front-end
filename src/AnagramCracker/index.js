@@ -18,12 +18,10 @@ const AnagramCracker = () => {
 
   return (
     <>
-      <div className="container">
-        <label htmlFor="letter-input">letters</label>
-        <input id="letter-input" type="text" onChange={handleChange}></input>
-        <button onClick={handleClick}>submit</button>
-        <Results items={anagrams} />
-      </div>
+      <label htmlFor="letter-input">letters</label>
+      <input id="letter-input" type="text" onChange={handleChange}></input>
+      <button onClick={handleClick}>submit</button>
+      <Results items={anagrams} />
     </>
   )
 }
