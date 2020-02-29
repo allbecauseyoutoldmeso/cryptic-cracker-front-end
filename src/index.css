@@ -5,6 +5,7 @@ input {
   border-radius: 5px;
   margin-top: 10px;
   background-color: #f4ead5;
+  font-family: 'Simonetta';
 }
 
 button {
@@ -41,4 +42,35 @@ label {
 
 p {
   margin: 5px 0;
+}
+
+.single-character-inputs {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.single-character-input {
+  width: 20px;
+  margin: 0 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+select {
+  border: 1px solid #e94e77;
+  border-radius: 5px;
+  background-color: #f4ead5;
+  color: #e94e77;
+  font-size: 15px;
+  font-family: 'Simonetta';
+  margin-top: 10px;
+}
+
+.brown {
+  color: #c6a49a;
 }

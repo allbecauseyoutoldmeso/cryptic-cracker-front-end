@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './index.css'
+import '../index.css'
 
 const AnagramCracker = () => {
   const baseUrl = process.env.REACT_APP_BACKEND_URL
